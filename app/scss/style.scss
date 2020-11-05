@@ -1,0 +1,152 @@
+@import "vars";
+@import "libs";
+@import "fonts";
+@import "global";
+
+.header {
+    background-color: $accent;
+
+    &__inner {
+        min-height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.logo__link {
+    margin-left: 8px;
+}
+
+.menu__btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    background-color: #ffff;
+    border: none;
+    position: relative;
+
+    &::after {
+        content: "";
+        width: 12px;
+        height: 2px;
+        border-radius: 1px;
+        background-color: $accent;
+        position: absolute;
+        top: 15px;
+        left: 14px;
+        box-shadow: 0 4px 0 0 $accent, 0 8px 0 0 $accent;
+    }
+}
+
+.head {
+    background-image: url(../img/bg-slider.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    min-height: 193px;
+}
+
+.top-slider {
+    background: rgba(33, 33, 33, 0.5);
+    min-height: 193px;
+
+    &__item {
+        color: #fff;
+        text-align: center;
+    }
+
+    &__title {
+        font-family: 'RobotoCondensed-Regular';
+        line-height: 28px;
+        font-size: 28px;
+        font-weight: 400;
+        text-transform: uppercase;
+        padding: 36px 0 28px;
+        max-width: 243px;
+        margin: 0 auto;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 8px;
+            width: 61px;
+            background-color: $textcolor;
+            margin: 0 auto;
+        }
+    }
+
+    &__btn {
+        display: none;
+    }
+
+    &__text {
+        display: none;
+    }
+
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+
+        .slick-active {
+            button {
+                background-color: transparent;
+                border: 1px solid #476E4D;
+            }
+        }
+
+        button {
+            font-size: 0;
+            border: none;
+            background-color: $accent;
+            padding: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin: 10px;
+        }
+    }
+}
+
+.call {
+    background-color: $accent;
+    padding: 40px 0;
+    color: #fff;
+    text-align: center;
+
+    &__title {
+        @extend %roboto-500;
+        font-size: 24px;
+        line-height: 24px;
+        margin-bottom: 15px;
+    }
+
+    &__text {
+        @extend %dosis-300;
+        font-size: 16px;
+        line-height: 18px;
+        margin-bottom: 40px;
+    }
+
+    &__btn {
+        padding: 16px 15px;
+        background-color: $bgcolor;
+        color: $accent;
+        @extend %roboto-500;
+        font-size: 18px;
+        border-radius: 3px;
+        border: none;
+        text-transform: uppercase;
+
+    }
+}
+
+@import "media";

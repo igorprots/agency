@@ -1,0 +1,230 @@
+@media(min-width:640px) {
+    .container {
+        padding: 0 30px;
+    }
+
+    .header {
+        &__inner {
+            min-height: 100px;
+        }
+    }
+
+    .logo__link {
+        margin-left: 14px;
+    }
+
+    .head {
+        min-height: 386px;
+    }
+
+    .top-slider {
+        &__item {
+            min-height: 386px;
+        }
+
+        &__title {
+            font-size: 60px;
+            line-height: 60px;
+            padding: 50px 0 15px;
+            margin: 0 auto 30px;
+            max-width: 520px;
+        }
+
+        &__btn {
+            display: block;
+            margin: 0 auto 113px;
+            background-color: $accent;
+            color: $bgcolor;
+            font-size: 18px;
+            padding: 16px 45px;
+            border-radius: 3px;
+            border: none;
+            font-weight: 600;
+        }
+
+
+        .slick-dots {
+            bottom: 50px;
+        }
+
+        .slick-arrow {
+            width: 56px;
+            height: 56px;
+            border: none;
+            position: absolute;
+            right: 0;
+            z-index: 5;
+        }
+
+        .slick-prev {
+            background-color: $accent;
+            top: calc(50% - 56px);
+
+        }
+
+        .slick-next {
+            background-color: $bgcolor;
+            bottom: calc(50% - 56px);
+        }
+    }
+}
+
+
+@media(min-width:768px) {
+    .container {
+        padding: 0 40px;
+    }
+
+    .logo__link {
+        margin-left: 0;
+    }
+
+    .head {
+        min-height: 465px;
+    }
+
+    .top-slider {
+        &__item {
+            min-height: 465px;
+        }
+
+        &__title {
+            padding: 87px 0 0;
+            margin: 0 auto 0;
+
+            &::after {
+                display: none;
+            }
+        }
+
+        &__text {
+            display: block;
+            padding: 25px 0 32px;
+            font-size: 18px;
+            line-height: 20px;
+            font-family: 'RobotoCondensed-Regular';
+            font-weight: 400;
+            max-width: 587px;
+            margin: 0 auto;
+        }
+    }
+
+    .call {
+        &__inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+        }
+
+        &__box {
+            max-width: 427px;
+        }
+
+        &__text {
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+@media(min-width:1024px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 40px;
+    }
+
+    .head {
+        min-height: 618px;
+    }
+
+    .top-slider {
+        &__item {
+            min-height: 618px;
+        }
+
+        &__title {
+            padding-top: 101px;
+            font-size: 84px;
+            line-height: 84px;
+            letter-spacing: 2px;
+            max-width: 750px;
+        }
+
+        .slick-dots {
+            bottom: 80px;
+        }
+    }
+
+
+}
+
+
+@media(min-width:1440px) {
+    .container {
+        max-width: 1320px;
+    }
+
+    .menu__btn {
+        margin-right: 90px;
+    }
+
+    .head {
+        min-height: 668px;
+    }
+
+    .top-slider {
+        &__item {
+            min-height: 668px;
+        }
+
+        &__title {
+            padding-top: 107px;
+            font-size: 96px;
+            line-height: 96px;
+            max-width: 865px;
+        }
+
+        &__text {
+            font-size: 26px;
+            max-width: 886px;
+        }
+
+        .slick-arrow {
+            width: 70px;
+            height: 70px;
+        }
+
+        .slick-prev {
+            top: calc(50% - 70px);
+        }
+
+        .slick-next {
+            bottom: calc(50% - 70px);
+        }
+
+        .slick-dots {
+            button {
+                background-color: #fff;
+            }
+
+            .slick-active {
+                button {
+                    background-color: transparent;
+                    border: 2px solid #fff;
+                }
+            }
+        }
+
+
+
+    }
+
+    .call {
+        &__inner {
+            padding: 0 80px;
+        }
+
+    }
+}

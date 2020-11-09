@@ -167,8 +167,8 @@
 
     &__text {
         color: #797979;
-        font-size: 18px;
-        line-height: 24px;
+        font-size: 15px;
+        line-height: 17px;
         margin-bottom: 40px;
     }
 
@@ -182,7 +182,30 @@
 
         &:last-child {
             border-bottom: 1px solid $bgcolor;
-            
+
+        }
+
+        &:hover {
+
+            .services__item-link,
+            .services__item-text {
+                opacity: 1;
+                height: auto;
+                transform: translate(0, -5px);
+                overflow: visible;
+
+            }
+
+            .services__item-title {
+                margin-bottom: 30px;
+            }
+
+            .services__item-inner {
+                border: 4px solid $accent;
+                margin: 18px;
+                padding: 5px 20px;
+                transition: all .3s;
+            }
         }
     }
 
@@ -192,18 +215,42 @@
 
     &__item-title {
         color: $textcolor;
-        font-weight: bold;
+        @extend %robotocondensed-700;
         font-size: 16px;
         line-height: 19px;
         letter-spacing: 2px;
     }
 
+    &__item-text,
+    &__item-link {
+        overflow: hidden;
+        opacity: 0;
+        height: 0;
+        transition: all .5s;
+    }
+
     &__item-text {
-        display: none;
+        margin-bottom: 17px;
+        @extend %dosis-400;
     }
 
     &__item-link {
-        display: none;
+        @extend %robotocondensed-700;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: 2px;
+        color: $accent;
+        position: relative;
+
+        &::after {
+            content: "";
+            background-image: url(../img/right-arrow.svg);
+            width: 18px;
+            height: 18px;
+            margin-left: 5px;
+            position: absolute;
+            transition: all .5s;
+        }
     }
 }
 
